@@ -124,7 +124,15 @@ html{
 .b-active{
     padding-left: 35rem;
 }
-
+.heading{
+    margin-bottom: 3rem;
+    text-align: center;
+    span{
+        text-transform: uppercase; 
+        font-size:6.5rem;
+        border-bottom:$border-bold ;
+    }
+}
 
 section{
     padding:3rem 2rem;
@@ -170,6 +178,126 @@ section{
 
     } 
 }
+.about{
+
+    .biography{
+        p{
+            margin:1rem auto;
+            max-width: 70rem;
+            line-height: 1.5;
+            font-size:1.7rem;
+        }
+        .bio{
+            margin-top:1rem;
+            h3{
+                padding:1rem 1.5rem;
+                display:inline-block;
+                margin:1rem;
+                background-color: $bg;
+                border:$border-light;
+                word-break: break-all;
+                font-size: 2.5rem;
+                font-weight:normal;
+                text-transform:none;
+                span{
+                    font-weight: lighter;
+                }
+            }
+        }
+        a{
+            @include btn();
+        }
+    }
+    .skills{
+        margin:3rem 0;
+        .progress{
+            margin-top:1rem;
+        } h3{
+            padding:1rem 1.5rem;
+            display:inline-block;
+            margin:1rem;
+            background-color: $primary;
+            word-break: break-all;
+            font-size: 2.5rem;
+            font-weight:normal;
+            text-transform:none;
+            span{
+                font-weight: lighter;
+                color:$black;
+
+            }
+        }
+    }
+    .edu-exp{
+        .row{
+            display:flex;
+            flex-wrap: wrap;
+            gap:1.5rem;
+            .box-container{
+                flex:1 1 40rem;
+                .box{
+                    text-align: left;
+                    margin: 1.5rem 0;
+                    background-color: $bg;
+                    padding:2rem;
+                    span{
+                        font-size: 1.5rem;
+                    }
+                    h3{
+                        font-size:2.5rem;
+                        font-weight: normal;
+                        margin:1rem;
+                    }
+                    p{
+                        line-height: 2;
+                        font-size: 1.7rem;
+                    }
+                }
+                .title{
+                    padding:1.5rem;
+                    font-size:2rem;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+.services{
+    .box-container{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(30rem,1fr)) ;
+        gap:1.5rem;
+        align-items: flex-start;
+        .box{
+            padding:3rem 2rem;
+            border:$border-light;
+            p {
+                line-height: 2;
+                font-size: 1.7rem;
+            }
+            i{
+                font-size:6rem;
+                margin-bottom:.5rem
+            }
+            h3{
+                margin:1rem 0;
+                font-size: 2rem;
+                padding:1rem;
+                background-color: $primary;
+            }
+            &:hover{
+                background-color: $black;
+
+            }
+            &:hover i,&:hover p{
+                color:$white;
+            }
+
+        }
+
+    }
+}
+
 
 @media (max-width:991px){
     html{
@@ -192,5 +320,11 @@ section{
     .home .image img{
         width:100%;
         height:auto;
+    }
+    .heading span{
+        font-size: 4rem;
+    }
+    .about .biography .bio h3{
+        font-size: 2rem;
     }
 }
