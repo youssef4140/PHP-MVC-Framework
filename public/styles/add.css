@@ -1,0 +1,21 @@
+.personal-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.personal-info input {
+  width: 100%;
+}
+
+.personal-info .biography {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.personal-info .submit {
+  grid-column: span 1;
+  text-align: center;
+}/*# sourceMappingURL=add.css.map */
